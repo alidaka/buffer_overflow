@@ -1,0 +1,4 @@
+gcc-6 -m32 -fno-stack-protector main.c
+gdb -q a.out
+info functions
+0x00001e60
