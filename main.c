@@ -2,13 +2,13 @@
 #include <string.h>
 
 void print_secrets() {
-  printf("alwaysbekind");
+  printf("alwaysbekind\n");
 }
 
 void hello(char* name) {
-  char message[16] = "hello, ";
-  strcpy(message + 7, name);
-  printf("%s\n", message);
+  char message[16];
+  strcpy(message, name);
+  printf("hello, %s!\n", message);
 }
 
 int main(int argc, char** argv) {
