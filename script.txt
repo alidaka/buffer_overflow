@@ -1,4 +1,12 @@
 gcc-6 -m32 -fno-stack-protector main.c
+
+ulimit -s unlimited
+
 gdb -q a.out
 info functions
-0x00001e60
+print print_secrets
+set args
+show args
+info functions system
+break hello
+find 0xf7e56940, +99999999999 "/bin/sh"
