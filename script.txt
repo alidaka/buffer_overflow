@@ -1,7 +1,5 @@
 gcc-6 -m32 -fno-stack-protector main.c
 
-ulimit -s unlimited
-
 gdb -q a.out
 info functions
 print print_secrets
@@ -10,3 +8,12 @@ show args
 info functions system
 break hello
 find 0xf7e56940, +99999999999 "/bin/sh"
+
+baller reference:
+http://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html
+
+disable ASLR?
+http://stackoverflow.com/questions/11238457/disable-and-re-enable-address-space-layout-randomization-only-for-myself
+setarch $(uname -m) -R /bin/bash
+OR
+ulimit -s unlimited
